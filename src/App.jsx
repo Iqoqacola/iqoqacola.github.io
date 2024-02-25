@@ -329,7 +329,7 @@ const Project = () => {
               className="hover:scale-105 hover:opacity-95 transition duration-300 ease-in-out"
             >
               <div className="shadow-2xll w-[300px] h-[375px] border-slate-500 border-2 rounded-2xl bg-bgColor flex flex-col justify-center items-center gap-10">
-                <div className="tictactoe bg-no-repeat bg-[url('tic-tac-toe.png')] shadow-2xl w-[250px] h-[250px] rounded-md"></div>
+                <div className="project bg-no-repeat shadow-2xl w-[250px] h-[250px] rounded-md"></div>
                 <h3 className="text-lg  md:text-2xl font-semibold">
                   TIC TAC TOE
                 </h3>
