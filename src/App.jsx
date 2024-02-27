@@ -5,6 +5,7 @@ export default function App() {
       <Hero></Hero>
       <About></About>
       <Project></Project>
+      <Footer></Footer>
     </>
   );
 }
@@ -120,7 +121,7 @@ const Hero = () => {
               </p>
 
               <a
-                href="https://wa.me/089690772452"
+                href="https://wa.me/+6289690772452"
                 target="_blank"
                 className="bg-primary p-4 block w-fit mt-5 rounded-xl text-xs md:text-base font-semibold shadow-2xl hover:opacity-80 transition duration-300 ease-in-out"
               >
@@ -132,9 +133,9 @@ const Hero = () => {
               <div className="relative w-full scale-75 lg:scale-90 flex justify-center">
                 <div className="relative w-[350px] h-[350px]">
                   <img
-                    src="karisah.png"
+                    src="iqoqacola.png"
                     alt="profile"
-                    className="max-w-xs drop-shadow-lg m-auto top-0 right-0 left-0 bottom-0 absolute"
+                    className="max-w-xs drop-shadow-lg m-auto top-0 right-0 left-0 bottom-24 scale-125 md:scale-150 absolute"
                   ></img>
                   <span className="absolute top-0 right-0 left-0 bottom-0 inset-x-0 -z-10">
                     <svg
@@ -317,7 +318,7 @@ const About = () => {
 const Project = () => {
   return (
     <>
-      <section id="project" className="bg-[#c9e0df]">
+      <section id="project" className="bg-[#c9e0df] pb-10">
         <div className="container p-5">
           <h3 className="m-5 text-xl md:text-3xl font-bold text-[#0F1035] text-center">
             PROJECT
@@ -329,7 +330,11 @@ const Project = () => {
               className="hover:scale-105 hover:opacity-95 transition duration-300 ease-in-out"
             >
               <div className="shadow-2xll w-[300px] h-[375px] border-slate-500 border-2 rounded-2xl bg-bgColor flex flex-col justify-center items-center gap-10">
-                <img src="/tic-tac-toe.png" alt="tictactoe project" className="project bg-no-repeat shadow-2xl w-[250px] h-[250px] rounded-md"></img>
+                <img
+                  src="/tic-tac-toe.png"
+                  alt="tictactoe project"
+                  className="project bg-no-repeat shadow-2xl w-[250px] h-[250px] rounded-md"
+                ></img>
                 <h3 className="text-lg  md:text-2xl font-semibold">
                   TIC TAC TOE
                 </h3>
@@ -338,6 +343,18 @@ const Project = () => {
           </div>
         </div>
       </section>
+    </>
+  );
+};
+
+const Footer = () => {
+  return (
+    <>
+      <footer>
+        <div className="contain">
+          <div className="flex flex-wrap"></div>
+        </div>
+      </footer>
     </>
   );
 };
