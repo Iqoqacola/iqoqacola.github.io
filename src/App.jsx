@@ -123,7 +123,7 @@ const Hero = () => {
               <a
                 href="https://wa.me/+6289690772452"
                 target="_blank"
-                className="bg-primary p-4 block w-fit mt-5 rounded-xl text-xs md:text-base font-semibold shadow-2xl hover:opacity-80 transition duration-300 ease-in-out"
+                className="bg-primary p-4 block w-fit mt-5 rounded-xl text-xs md:text-base font-semibold shadow-2xl hover:opacity-80 transition duration-300 ease-in-out relative z-10"
               >
                 Contact Me
               </a>
