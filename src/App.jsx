@@ -32,7 +32,7 @@ const Header = () => {
     <>
       <header
         id="header"
-        className="w-full fixed shadow-md bg-opacity-70 top-0 left-0 z-10 bg-bgColor"
+        className="w-full fixed shadow-md bg-opacity-70 top-0 left-0 bg-bgColor z-50"
       >
         <div className="container">
           <div className="flex justify-between md:justify-around relative p-4">
@@ -163,13 +163,7 @@ const Hero = () => {
 };
 
 const About = () => {
-  let AboutMe = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-  delectus a, rerum temporibus natus tempore molestias repellat
-  nobis nam? Ducimus laborum architecto aut tempora? Numquam
-  distinctio neque eligendi dolores sint rerum voluptatibus
-  consequuntur laborum necessitatibus eos, repudiandae esse totam
-  quas odio ipsum, doloribus ad repellat praesentium quis
-  inventore obcaecati. Aut.`;
+  let AboutMe = `I am a Full Stack Software Developer with a focus on modern web development, specializing primarily in using React to build dynamic and responsive user interfaces. I possess a strong understanding of frontend development using React and modern JavaScript. Additionally, I have a solid grasp of backend development with Node.js and Express.`;
 
   return (
     <>
@@ -184,7 +178,7 @@ const About = () => {
               <p className="text-secondary text-base md:text-2xl">
                 {AboutMe}{" "}
                 <a
-                  href="https://iqoqacola.github.io/cv"
+                  href="https://drive.google.com/uc?export=download&id=1TIP2QHwFuxF42U7LLaWn_RP4BHAtR0v5"
                   target="_blank"
                   className="text-slate-700 hover:text-slate-400 font-semibold"
                 >
@@ -323,6 +317,7 @@ const Project = () => {
           <h3 className="m-5 text-xl md:text-3xl font-bold text-[#0F1035] text-center">
             PROJECT
           </h3>
+
           <div className="flex w-full justify-center flex-wrap gap-5 md:gap-10">
             <a
               href="https://iqoqacola.github.io/tic-tac-toe"
@@ -340,6 +335,23 @@ const Project = () => {
                 </h3>
               </div>
             </a>
+
+            <a
+              href="https://iqoqacola.github.io/calculator-app"
+              target="_blank"
+              className="hover:scale-105 hover:opacity-95 transition duration-300 ease-in-out"
+            >
+              <div className="shadow-2xll w-[300px] h-[375px] border-slate-500 border-2 rounded-2xl bg-bgColor flex flex-col justify-center items-center gap-10">
+                <img
+                  src="/calculator.png"
+                  alt="calculator project"
+                  className="project bg-no-repeat shadow-2xl w-[250px] h-[250px] rounded-md"
+                ></img>
+                <h3 className="text-lg  md:text-2xl font-semibold">
+                  CALCULATOR
+                </h3>
+              </div>
+            </a>
           </div>
         </div>
       </section>
@@ -350,9 +362,41 @@ const Project = () => {
 const Footer = () => {
   return (
     <>
-      <footer>
-        <div className="contain">
-          <div className="flex flex-wrap"></div>
+      <footer className="footer">
+        <div className="container">
+          <div className="flex flex-wrap p-5">
+            <div className="w-full m-2 md:mx-16">
+              <div>
+                <h2>Iqoqacola</h2>
+                <p>
+                  Petung, Cengkeh Jl. Tomat RT 14
+                  <br />
+                  Kabupaten Penajam 76141 <br />
+                  PPU, Indonesia
+                </p>
+                <h2>Contact</h2>
+                <a
+                  href="mailto:iqoqacola@gmail.com"
+                  className="flex gap-1 text-[#9197A1] text-sm md:text-lg items-center hover:text-primary transition duration-300 ease-in-out"
+                >
+                  <svg
+                    width={"15"}
+                    role="img"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="fill-current"
+                  >
+                    <title>Gmail</title>
+                    <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+                  </svg>
+                  iqoqacola@gmail.com
+                </a>
+              </div>
+            </div>
+            <div className="w-full border-t-[1px] md:mx-16 m-2 py-4">
+              <p className="text-sm">Hak Cipta © 2024 Iqoqacola</p>
+            </div>
+          </div>
         </div>
       </footer>
     </>
