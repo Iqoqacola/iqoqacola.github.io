@@ -320,6 +320,25 @@ const Project = () => {
 
           <div className="flex w-full justify-center flex-wrap gap-5 md:gap-10">
             <a
+              href="https://iqoqacola.github.io/landing-page"
+              target="_blank"
+              className="hover:scale-105 hover:opacity-95 transition duration-300 ease-in-out"
+            >
+              <div className="shadow-2xll w-[300px] h-[375px] px-2 border-slate-500 border-2 rounded-2xl bg-bgColor flex flex-col justify-center items-center gap-10">
+                <div className="w-[250px] h-[250px] flex items-center">
+                  <img
+                    src="/landing-page.png"
+                    alt="landing-page project"
+                    className="project bg-no-repeat shadow-2xl w-fit h-fit rounded-md"
+                  ></img>
+                </div>
+                <h3 className="text-lg  md:text-2xl font-semibold">
+                  LANDING PAGE
+                </h3>
+              </div>
+            </a>
+
+            <a
               href="https://iqoqacola.github.io/tic-tac-toe"
               target="_blank"
               className="hover:scale-105 hover:opacity-95 transition duration-300 ease-in-out"
@@ -394,7 +413,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="w-full border-t-[1px] md:mx-16 m-2 py-4">
-              <p className="text-sm">Hak Cipta © 2024 Iqoqacola</p>
+              <p className="text-sm">Copyright © 2024 Iqoqacola</p>
             </div>
           </div>
         </div>
