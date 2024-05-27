@@ -2,15 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap");
+
 @layer base {
   html {
-    font-family: "League Spartan", sans-serif;
+    font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
     scroll-padding: 100px;
-
   }
-  body {
-    background-color: #dcf2f1;
+  body,
+  #header {
+    background-image: radial-gradient(circle, #c6eae8, #a0e4e1);
+
     /* font-family: "League Spartan"; */
   }
 
@@ -20,43 +23,46 @@
     @apply font-sans font-normal;
 
     h2 {
-      @apply text-base md:text-xl my-2; 
+      @apply text-base md:text-xl my-2;
     }
     p {
       @apply text-sm md:text-lg text-[#9197A1];
     }
   }
-  
-.hamburger-line {
-  @apply w-[20px] h-[2px] block bg-secondary my-1;
-}
 
-.hamburger-active {
-  span:nth-child(1) {
-    @apply rotate-45;
+  .hamburger-line {
+    @apply w-[20px] h-[2px] block bg-secondary my-1;
   }
 
-  span:nth-child(2) {
-    @apply scale-0;
+  .hamburger-active {
+    span:nth-child(1) {
+      @apply rotate-45;
+    }
+
+    span:nth-child(2) {
+      @apply scale-0;
+    }
+
+    span:nth-child(3) {
+      @apply -rotate-45;
+    }
   }
 
-  span:nth-child(3) {
-    @apply -rotate-45;
+  .hamburger-transition {
+    @apply transition duration-300 ease-in-out;
   }
 }
 
-.hamburger-transition {
-  @apply transition duration-300 ease-in-out;
+.error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  text-align: center;
 }
 
+.pages {
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
 }
-
-
-.test {
-  border: 2px solid blue;
-}
-
-/* DCF2F1
-7FC7D9
-365486
-0F1035 */

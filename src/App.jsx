@@ -1,17 +1,28 @@
-import { About } from "./components/Layouts/About";
-import { Footer } from "./components/Layouts/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+//page
+import { Home } from "./pages/Home";
+import { About } from "./pages/About";
+import { Project } from "./pages/Project";
+import ErrorPage from "./pages/Error";
+
+//components
 import { Header } from "./components/Layouts/Header";
-import { Hero } from "./components/Layouts/Hero";
-import { Project } from "./components/Layouts/Project";
 
 export default function App() {
   return (
     <>
-      <Header></Header>
-      <Hero></Hero>
-      <About></About>
-      <Project></Project>
-      <Footer></Footer>
+      <BrowserRouter>
+        <Header />
+        <div className="pages">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
     </>
   );
 }
