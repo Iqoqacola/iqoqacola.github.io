@@ -12,7 +12,7 @@ export const LinkProject = ({
   return (
     <>
       <div className="hover:scale-105 hover:opacity-90 transition duration-300 ease-in-out">
-        <div className="w-[300px] h-[450px] p-4 border-2 border-black rounded-lg shadow-lg bg-secondary flex flex-col justify-center items-center hover:bg-thirdty transition duration-300 ease-in-out">
+        <div className="w-[300px] h-[475px] p-4 border-2 border-black rounded-lg shadow-lg bg-secondary flex flex-col justify-center items-center hover:bg-thirdty transition duration-300 ease-in-out">
           <div className="w-[250px] flex items-center flex-col gap-2 mt-4">
             <img
               src={cover}

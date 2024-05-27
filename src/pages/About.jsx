@@ -42,7 +42,7 @@ export const About = () => {
             </p>
 
             <a
-              href="https://drive.google.com/uc?export=download&id=1TIP2QHwFuxF42U7LLaWn_RP4BHAtR0v5"
+              href="https://drive.usercontent.google.com/u/0/uc?id=11qxSmFk_pQu-Swv7RIXi2UwwIUI2GNWj&export=download"
               target="_blank"
               className="w-fit mt-5 block p-4 shadow-2xl bg-primary font-semibold rounded-xl hover:bg-slate-900 hover:text-white transition duration-300 ease-in-out"
             >
