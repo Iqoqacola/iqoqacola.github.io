@@ -87,7 +87,7 @@ export const Contact = () => {
     <>
       <section className="pt-28 w-full">
         <div
-          className="container w-2/3 lg:w-1/3 contact-form"
+          className="container w-auto lg:w-1/3 contact-form"
           data-aos="fade-up"
         >
           <form onSubmit={sendEmail} className="contact-me flex flex-col">
