@@ -20,11 +20,11 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
-  env:
-    REACT_APP_CONTACT_URI: ${{ secrets.REACT_APP_CONTACT_URI }}
-    REACT_APP_SERVICE_ID: ${{ secrets.REACT_APP_SERVICE_ID }}
-    REACT_APP_TEMPLATE_ID: ${{ secrets.REACT_APP_TEMPLATE_ID }}
-    REACT_APP_USER_ID: ${{ secrets.REACT_APP_USER_ID }}
+env:
+  REACT_APP_CONTACT_URI: ${{ secrets.REACT_APP_CONTACT_URI }}
+  REACT_APP_SERVICE_ID: ${{ secrets.REACT_APP_SERVICE_ID }}
+  REACT_APP_TEMPLATE_ID: ${{ secrets.REACT_APP_TEMPLATE_ID }}
+  REACT_APP_USER_ID: ${{ secrets.REACT_APP_USER_ID }}
 
 jobs:
   # Single deploy job since we're just deploying
