@@ -87,10 +87,13 @@ export const Contact = () => {
     <>
       <section className="pt-28 w-full">
         <div
-          className="container w-auto lg:w-1/3 contact-form"
+          className="container w-full lg:w-1/3 contact-form"
           data-aos="fade-up"
         >
-          <form onSubmit={sendEmail} className="contact-me flex flex-col">
+          <form
+            onSubmit={sendEmail}
+            className="contact-me flex flex-col w-full"
+          >
             <h2 className="text-center text-2xl font-bold text-red-400 drop-shadow-md">
               Contact me!
             </h2>
