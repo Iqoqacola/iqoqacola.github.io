@@ -43,8 +43,8 @@ export const Project = () => {
               <LinkProject
                 cover="/landing-page.png"
                 altCover="landing-page project"
-                linkSite="https://iqoqacola.github.io/landing-page"
-                linkCode="https://github.com/Iqoqacola/landing-page"
+                linkSite="https://iqoqacola.github.io/nexcent"
+                linkCode="https://github.com/Iqoqacola/nexcent"
                 title={"Landing Page"}
               >
                 This project focuses on building an optimized landing page using
