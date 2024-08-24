@@ -25,6 +25,19 @@ export const Project = () => {
           <div className="flex w-full justify-center flex-wrap gap-5 md:gap-10">
             <div data-aos="fade-up">
               <LinkProject
+                cover="/cinemox.png"
+                altCover="cinemox project"
+                linkSite="https://cine-mox.vercel.app/"
+                linkCode="https://github.com/Iqoqacola/CineMOX"
+                title={"Cinemox"}
+              >
+                The CINEMOX project is developed using React. This project
+                serves as a platform for users to discover and search for both
+                released and upcoming MOVIES based on various categories.
+              </LinkProject>
+            </div>
+            <div data-aos="fade-up">
+              <LinkProject
                 cover="/task-manager.png"
                 altCover="task-manager project"
                 linkSite="https://fabulous-biscotti-c77767.netlify.app/"

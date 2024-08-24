@@ -123,7 +123,7 @@ export const Home = () => {
             {/* FACEBOOK */}
             <a
               target="_blank"
-              href="https://www.facebook.com/annisa.s.904750 "
+              href="https://www.facebook.com/iqoqacola/"
               className="text-thirdty hover:text-black transition duration-300 ease-in-out"
             >
               <svg
@@ -195,7 +195,7 @@ export const Home = () => {
             {/* LINKEDIN */}
             <a
               target="_blank"
-              href="https://www.linkedin.com/feed/"
+              href="https://www.linkedin.com/in/iqoqacola/"
               className="text-thirdty hover:text-black transition duration-300 ease-in-out"
             >
               <svg
