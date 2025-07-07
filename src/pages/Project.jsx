@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -27,7 +27,6 @@ export const Project = () => {
               <LinkProject
                 cover="/cinemox.png"
                 altCover="cinemox project"
-                linkSite="https://cine-mox.vercel.app/"
                 linkCode="https://github.com/Iqoqacola/CineMOX"
                 title={"Cinemox"}
               >
@@ -40,7 +39,6 @@ export const Project = () => {
               <LinkProject
                 cover="/task-manager.png"
                 altCover="task-manager project"
-                linkSite="https://fabulous-biscotti-c77767.netlify.app/"
                 linkCode="https://github.com/Iqoqacola/client-taskManajer"
                 linkCode2="https://github.com/Iqoqacola/restAPI-taskManager"
                 title={"Task Manager"}
