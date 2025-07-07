@@ -8,9 +8,9 @@ import Tilt from "react-parallax-tilt";
 export const Home = () => {
   const tagline = Typewriter({
     words: [
-      "Your Idea, Our Execution",
-      "Your Vision, Our Web Mastery",
-      "Your Inspiration, Our Innovation",
+      "Building the Future, One App at a Time",
+      "Reliable Software. Real Solutions",
+      "Bringing Ideas to Life through Code",
     ],
     loop: true,
     typeSpeed: 40,
@@ -40,10 +40,10 @@ export const Home = () => {
                 </span>
               </h1>
               <h2 className="text-lg md:text-xl font-medium text-gray-500 lg:text-xl">
-                Full Stack Web Developer 💻
+                Software Enginer 💻
               </h2>
               <p className="text-base md:text-lg md:max-w-none max-w-xs mt-5">
-                Web Development: <br />
+                End-to-End Solution: <br />
                 <span className="font-semibold text-red-500">{tagline}</span>
               </p>
 
