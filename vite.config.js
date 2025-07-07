@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     envCompatible()
   ],
-  base: '/iqoqacola.github.io/'
+  base: '/'
 })
