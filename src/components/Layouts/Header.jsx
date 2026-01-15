@@ -33,7 +33,7 @@ const Header = () => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-2 px-4"
+        className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-8 px-4"
       >
         <nav
           className={`
