@@ -2,133 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap");
-
 @layer base {
   html {
-    font-family: "Poppins", sans-serif;
+    font-family: "Inter", sans-serif;
     scroll-behavior: smooth;
-    scroll-padding: 100px;
-  }
-  body,
-  #header {
-    background-image: radial-gradient(circle, #c6eae8, #a0e4e1);
-
-    /* font-family: "League Spartan"; */
-  }
-
-  .footer {
-    background-color: #222222;
-    color: white;
-    @apply font-sans font-normal;
-
-    h2 {
-      @apply text-base md:text-xl my-2;
-    }
-    p {
-      @apply text-sm md:text-lg text-[#9197A1];
-    }
-  }
-
-  .hamburger-line {
-    @apply w-[20px] h-[2px] block bg-secondary my-1;
-  }
-
-  .hamburger-active {
-    span:nth-child(1) {
-      @apply rotate-45;
-    }
-
-    span:nth-child(2) {
-      @apply scale-0;
-    }
-
-    span:nth-child(3) {
-      @apply -rotate-45;
-    }
-  }
-
-  .hamburger-transition {
-    @apply transition duration-300 ease-in-out;
-  }
-
-  form button {
-    background: #7fc7d9;
-    border: 0;
-    padding: 10px;
-    font-family: "Poppins";
-    border-radius: 4px;
-    cursor: pointer;
+    background-color: #0b0c10;
+    color: #c5c6c7;
   }
 }
 
-.error-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-  text-align: center;
+.hamburger-line {
+  @apply w-[20px] h-[2px] block bg-platinum my-1;
 }
 
-.pages {
-  max-width: 1400px;
-  padding: 20px;
-  margin: 0 auto;
-}
-
-div.success {
-  padding: 10px;
-  background: #ffefef;
-  border: 1px solid #1aac83;
-  color: #1aac83;
-  border-radius: 4px;
-  margin: 12px 0;
-}
-
-div.error {
-  padding: 10px;
-  background: #ffefef;
-  border: 1px solid #e7195a;
-  color: #e7195a;
-  border-radius: 4px;
-  margin: 12px 0;
-}
-
-// Form Contact
-.contact-form {
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
-  border-radius: 4px;
-  padding: 10px;
-  margin: auto;
-}
-
-.contact-me {
-  padding: 5px;
-}
-
-.contact-me > input,
-.contact-me > label,
-.contact-me > textarea {
-  margin: 2px 0;
-  border-radius: 8px;
-  height: 80%;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 8px 6px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.contact-me > input {
-  padding-left: 12px;
-}
-
-.contact-me > button {
-  margin-top: 8px;
-  font-weight: 500;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-input.error,
-textarea.error {
-  border: 1px solid #e7195a;
+.hamburger-active {
+  span:nth-child(1) {
+    @apply rotate-45 translate-y-[6px];
+  }
+  span:nth-child(2) {
+    @apply opacity-0;
+  }
+  span:nth-child(3) {
+    @apply -rotate-45 -translate-y-[6px];
+  }
 }

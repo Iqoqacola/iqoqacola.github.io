@@ -1,34 +1,36 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import Header from "./components/Layouts/Header";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Project from "./pages/Project";
+import Experience from "./pages/Experience";
+import Contact from "./pages/Contact";
 
-//page
-import { Home } from "./pages/Home";
-import { About } from "./pages/About";
-import { Project } from "./pages/Project";
-import { Contact } from "./pages/Contact";
-import ErrorPage from "./pages/Error";
-
-//components
-import { Header } from "./components/Layouts/Header";
-
-export default function App() {
-  const location = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
+function App() {
   return (
-    <>
+    <div className="bg-richBlack overflow-x-hidden">
       <Header />
-      <div className="pages">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/project" element={<Project />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-      </div>
-    </>
+
+      <section id="home">
+        <Home />
+      </section>
+
+      <section id="about">
+        <About />
+      </section>
+
+      <section id="project">
+        <Project />
+      </section>
+
+      <section id="experience">
+        <Experience />
+      </section>
+
+      <section id="contact">
+        <Contact />
+      </section>
+    </div>
   );
 }
+
+export default App;

@@ -7,16 +7,23 @@ export default {
   theme: {
     container: {
       center: true,
+      padding: '2rem',
     },
     extend: {
-      colors: {
-        'primary': '#7FC7D9',
-        'secondary': '#6b7280',
-        'bgColor': '#DCF2F1',
-        'thirdty': '#365486'
+      fontFamily: {
+        serif: ['"Playfair Display"', 'serif'],
+        sans: ['"Inter"', 'sans-serif'],
       },
+      colors: {
+        richBlack: '#0B0C10',
+        gunmetal: '#1F2833',
+        platinum: '#C5C6C7',
+        luxuryGold: '#D4AF37',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      }
     },
   },
   plugins: [],
 }
-
