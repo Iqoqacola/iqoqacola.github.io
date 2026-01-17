@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FaJava, FaReact, FaGitAlt } from "react-icons/fa";
 import { SiSpringboot, SiPostgresql, SiTailwindcss } from "react-icons/si";
+import AboutScene from "../components/3d/AboutScene";
 
 const About = () => {
   const fadeInUp = {
@@ -90,10 +91,9 @@ const About = () => {
             className="w-full md:w-5/12"
           >
             <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-to-r from-luxuryGold to-gray-800 rounded-xl opacity-30 blur-lg group-hover:opacity-50 transition duration-500"></div>
-
               <div className="relative w-full aspect-[4/5] bg-gray-800/50 rounded-xl overflow-hidden border border-white/10 flex items-center justify-center">
                 {/* <AboutScene /> */}
+                <AboutScene />
               </div>
             </div>
           </motion.div>

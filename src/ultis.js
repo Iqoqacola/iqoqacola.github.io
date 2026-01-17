@@ -1,6 +1,3 @@
-import { FaJava, FaReact, FaGitAlt } from "react-icons/fa";
-import { SiSpringboot, SiPostgresql, SiTailwindcss } from "react-icons/si";
-
 // (Desktop 16:9, Mobile 9:16)
 export const projectData = [
     {
