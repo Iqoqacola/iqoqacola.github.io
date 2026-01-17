@@ -91,7 +91,7 @@ const About = () => {
             className="w-full md:w-5/12"
           >
             <div className="relative group">
-              <div className="relative w-full aspect-[4/5] bg-gray-800/50 rounded-xl overflow-hidden border border-white/10 flex items-center justify-center">
+              <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden flex items-center justify-center">
                 {/* <AboutScene /> */}
                 <AboutScene />
               </div>
