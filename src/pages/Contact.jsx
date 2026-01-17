@@ -69,7 +69,7 @@ const Contact = () => {
                   <div className="w-10 h-10 shrink-0 rounded-full bg-richBlack flex items-center justify-center border border-white/10 group-hover:border-luxuryGold transition-colors">
                     <FaEnvelope />
                   </div>
-                  <span className="break-all md:break-normal">
+                  <span className="break-all md:break-normal text-sm md:text-md">
                     balbaloy3@gmail.com
                   </span>
                 </a>
@@ -84,7 +84,7 @@ const Contact = () => {
                   <div className="w-10 h-10 shrink-0 rounded-full bg-richBlack flex items-center justify-center border border-white/10 group-hover:border-luxuryGold transition-colors">
                     <FaWhatsapp />
                   </div>
-                  <span className="break-all md:break-normal">
+                  <span className="break-all md:break-normal text-sm md:text-md">
                     +62 878-0562-5342
                   </span>
                 </a>

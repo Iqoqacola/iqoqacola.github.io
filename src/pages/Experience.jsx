@@ -63,7 +63,7 @@ const Experience = () => {
                   <span className="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-richBlack bg-gray-600 group-hover:bg-luxuryGold transition-colors duration-300"></span>
 
                   <div className="bg-gunmetal/30 p-6 rounded-2xl border border-white/5 hover:border-luxuryGold/30 transition-all duration-300">
-                    <div className="flex justify-between items-start mb-2">
+                    <div className="flex justify-between md:flex-row flex-col items-start mb-2 gap-2 md:gap-0">
                       <h4 className="text-xl font-bold text-white group-hover:text-luxuryGold transition-colors">
                         {exp.role}
                       </h4>

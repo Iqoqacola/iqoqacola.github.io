@@ -21,7 +21,7 @@ const About = () => {
   return (
     <section className="min-h-screen bg-richBlack pt-28 pb-20 px-6 flex items-center">
       <div className="container mx-auto max-w-6xl">
-        <div className="flex flex-col md:flex-row gap-16 items-center">
+        <div className="flex flex-col-reverse md:flex-row gap-16 items-center">
           <motion.div
             initial="hidden"
             whileInView="visible"
