@@ -1,40 +1,12 @@
 import { motion } from "framer-motion";
 import { FaBriefcase, FaGraduationCap, FaCalendarAlt } from "react-icons/fa";
-
+import { educationData, experienceData } from "../ultis";
 const Experience = () => {
   // Data Experience
-  const experiences = [
-    {
-      id: 1,
-      role: "Front-End Developer",
-      company: "Minilemon Technology",
-      type: "Internship",
-      date: "Oct 2025 - Feb 2026",
-      tech: ["React.js", "Tailwind CSS", "Git"],
-      description:
-        "Collaborated with the development team to build dynamic and responsive web interfaces using React.js. Optimized component performance, implemented UI/UX designs into functional code, and ensured cross-browser compatibility.",
-    },
-  ];
+  const experiences = experienceData;
 
   // Data Education (Pendidikan)
-  const educations = [
-    {
-      id: 1,
-      school: "Universitas Terbuka",
-      degree: "Bachelor of Information Systems (S1)",
-      date: "2024 - Present (Expected 2028)",
-      description:
-        "Majoring in Information Systems. Focusing on software engineering, database management, system analysis, and IT infrastructure.",
-    },
-    {
-      id: 2,
-      school: "Poltekkes Kemenkes Kaltim",
-      degree: "Bachelor of Health Promotion (S1)",
-      date: "2022 - 2026",
-      description:
-        "Majoring in Health Promotion. Learned about public health strategies, communication methodology, and designing health education programs for the community.",
-    },
-  ];
+  const educations = educationData;
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },

@@ -85,7 +85,7 @@ export const Home = () => {
                 download="CV_Muhammad_Iqbal.pdf"
                 className="inline-flex items-center gap-3 bg-luxuryGold text-richBlack px-8 py-3 rounded-xl font-bold uppercase tracking-wider hover:bg-white hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.4)]"
               >
-                <span>Download CV</span>
+                <span>Resume</span>
                 <FaDownload className="text-lg" />
               </a>
             </motion.div>

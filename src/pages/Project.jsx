@@ -9,6 +9,7 @@ import {
   FaChevronLeft,
   FaChevronRight,
 } from "react-icons/fa";
+import { projectData } from "../ultis";
 
 const Projects = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -21,33 +22,8 @@ const Projects = () => {
 
   // DATA PROJECT
   // (Desktop 16:9, Mobile 9:16)
-  const projects = [
-    {
-      id: 1,
-      title: "Asapmu Parumu",
-      description:
-        "A mobile-focused application designed to help users quit smoking. Features include progress tracking, health improvement statistics, and community support forums.",
-      tech: ["React", "Tailwind", "Spring Boot", "PostgreSQL"],
-      githubLink: {
-        frontend: "https://github.com/Iqoqacola/asapmu-parumu",
-        backend: "https://github.com/Iqoqacola/asapmu-parumu-api",
-      },
-      liveLink: "https://asapmu-parumu.vercel.app",
-      laptopImg: "/projects/asapmu-laptop.png",
-      mobileImg: "/projects/asapmu-mobile.png",
-    },
-    {
-      id: 2,
-      title: "Prioritix",
-      description:
-        "Designed for aesthetics and efficiency, this to-do app bridges planning and execution. Features a clean interface, Dark Mode, and focus tools to boost productivity.",
-      tech: ["React", "Tailwind", "Express.js ", "PostgreSQL"],
-      githubLink: "https://github.com/Iqoqacola/prioritix",
-      liveLink: null,
-      laptopImg: null,
-      mobileImg: null,
-    },
-  ];
+
+  const projects = projectData;
 
   useEffect(() => {
     const handleResize = () => {
@@ -83,7 +59,7 @@ const Projects = () => {
 
   const visibleProjects = projects.slice(
     currentIndex,
-    currentIndex + itemsPerView
+    currentIndex + itemsPerView,
   );
 
   const fadeInUp = {
@@ -330,7 +306,7 @@ const Projects = () => {
                       : "bg-gray-600 hover:bg-gray-400"
                   }`}
                 />
-              )
+              ),
             )}
           </div>
         </div>
