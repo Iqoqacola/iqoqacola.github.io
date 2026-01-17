@@ -60,8 +60,8 @@ export const Home = () => {
                 Software Engineer 💻
               </h3>
               <div className="font-mono text-sm md:text-base text-gray-500">
-                End-to-End Solution: <br />
-                <span className="text-luxuryGold font-semibold text-lg">
+                End-to-End Solution:
+                <div className="text-luxuryGold font-semibold text-lg min-h-[3.5rem] md:min-h-fit">
                   <Typewriter
                     words={[
                       "Building the Future, One App at a Time",
@@ -75,7 +75,7 @@ export const Home = () => {
                     deleteSpeed={30}
                     delaySpeed={2000}
                   />
-                </span>
+                </div>
               </div>
             </motion.div>
 

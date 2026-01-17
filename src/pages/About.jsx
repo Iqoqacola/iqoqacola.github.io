@@ -57,7 +57,7 @@ const About = () => {
               <h3 className="text-white font-serif text-xl mb-6 border-b border-white/10 pb-2 inline-block">
                 Core Technologies
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
                 {skills.map((skill, index) => (
                   <motion.div
                     key={skill.name}
@@ -65,14 +65,14 @@ const About = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex items-center gap-2 bg-gunmetal/30 p-4 rounded-lg border border-white/5 hover:border-luxuryGold/30 transition-all duration-300 group"
+                    className="flex items-center gap-3 bg-gunmetal/30 p-3 md:p-4 rounded-lg border border-white/5 hover:border-luxuryGold/30 transition-all duration-300 group"
                   >
                     <span
-                      className={`text-3xl ${skill.color} group-hover:scale-110 transition-transform`}
+                      className={`text-2xl md:text-3xl ${skill.color} group-hover:scale-110 transition-transform shrink-0`}
                     >
                       {skill.icon}
                     </span>
-                    <span className="text-gray-300 font-medium text-sm">
+                    <span className="text-gray-300 font-medium text-sm md:text-base break-words">
                       {skill.name}
                     </span>
                   </motion.div>

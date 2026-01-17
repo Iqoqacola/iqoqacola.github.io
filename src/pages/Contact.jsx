@@ -54,37 +54,45 @@ const Contact = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <div className="p-8 bg-gunmetal/30 rounded-2xl border border-white/5 hover:border-luxuryGold/30 transition-all duration-300">
+            {/* Quick Connect Box */}
+            <div className="p-6 md:p-8 bg-gunmetal/30 rounded-2xl border border-white/5 hover:border-luxuryGold/30 transition-all duration-300">
               <h3 className="text-xl font-serif text-white mb-6">
                 Quick Connect
               </h3>
 
               <div className="space-y-6">
+                {/* Email Item */}
                 <a
                   href="mailto:balbaloy3@gmail.com"
                   className="flex items-center gap-4 text-gray-400 hover:text-luxuryGold transition-colors group"
                 >
-                  <div className="w-10 h-10 rounded-full bg-richBlack flex items-center justify-center border border-white/10 group-hover:border-luxuryGold">
+                  <div className="w-10 h-10 shrink-0 rounded-full bg-richBlack flex items-center justify-center border border-white/10 group-hover:border-luxuryGold transition-colors">
                     <FaEnvelope />
                   </div>
-                  <span>balbaloy3@gmail.com</span>
+                  <span className="break-all md:break-normal">
+                    balbaloy3@gmail.com
+                  </span>
                 </a>
 
+                {/* WhatsApp Item */}
                 <a
                   href="https://wa.me/6287805625342"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-4 text-gray-400 hover:text-luxuryGold transition-colors group"
                 >
-                  <div className="w-10 h-10 rounded-full bg-richBlack flex items-center justify-center border border-white/10 group-hover:border-luxuryGold">
+                  <div className="w-10 h-10 shrink-0 rounded-full bg-richBlack flex items-center justify-center border border-white/10 group-hover:border-luxuryGold transition-colors">
                     <FaWhatsapp />
                   </div>
-                  <span>+62 878-0562-5342</span>
+                  <span className="break-all md:break-normal">
+                    +62 878-0562-5342
+                  </span>
                 </a>
               </div>
             </div>
           </motion.div>
 
+          {/* Form Section */}
           <motion.form
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
