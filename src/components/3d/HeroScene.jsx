@@ -1,70 +1,60 @@
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import {
-  Float,
-  PerspectiveCamera,
+  OrbitControls,
+  useGLTF,
   Environment,
-  Stars,
+  ContactShadows,
 } from "@react-three/drei";
-import { useRef } from "react";
+import { Suspense } from "react";
+import { rotate } from "three/tsl";
 
-function MainCrystal() {
-  const mesh = useRef();
-  useFrame((state, delta) => {
-    mesh.current.rotation.y -= delta * 0.4;
-    mesh.current.rotation.x -= delta * 0.1;
-  });
+function Model() {
+  const { scene } = useGLTF("/models/lumen_vgs_pack.glb");
 
   return (
-    <Float speed={2} rotationIntensity={1} floatIntensity={1}>
-      <mesh ref={mesh} position={[0, 0, 0]}>
-        {/* Inti Kristal */}
-        <icosahedronGeometry args={[1.5, 0]} />
-        <meshStandardMaterial
-          color="#D4AF37"
-          roughness={0.1}
-          metalness={0.9}
-          emissive="#D4AF37"
-          emissiveIntensity={0.1}
-        />
-
-        {/* Wireframe Luar */}
-        <mesh scale={[1.2, 1.2, 1.2]}>
-          <icosahedronGeometry args={[1.5, 0]} />
-          <meshStandardMaterial
-            color="#66FCF1"
-            wireframe={true}
-            transparent
-            opacity={0.3}
-          />
-        </mesh>
-      </mesh>
-    </Float>
+    <primitive
+      object={scene}
+      scale={0.75}
+      position={[0.75, -0.5, 0]}
+      rotation={[0, 0.85, 0]}
+    />
   );
 }
 
 const HeroScene = () => {
   return (
-    <Canvas className="w-full h-full">
-      <PerspectiveCamera makeDefault position={[0, 0, 6]} />
-
+    <Canvas className="w-full h-full" camera={{ position: [0, 0, 7], fov: 50 }}>
+      {/* Pencahayaan */}
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={1.5} color="#66FCF1" />
       <pointLight position={[-10, -10, -10]} intensity={1.5} color="#D4AF37" />
 
-      <MainCrystal />
-
-      <Stars
-        radius={50}
-        depth={50}
-        count={1000}
-        factor={4}
-        saturation={0}
-        fade
-        speed={1}
-      />
       <Environment preset="city" />
+
+      {/* Kontrol Interaksi */}
+      <OrbitControls
+        enableZoom={false}
+        enablePan={false}
+        minPolarAngle={Math.PI / 3.5}
+        maxPolarAngle={Math.PI / 2.5}
+      />
+
+      <Suspense fallback={null}>
+        <Model />
+      </Suspense>
+
+      <ContactShadows
+        opacity={0.5}
+        scale={10}
+        blur={1}
+        far={10}
+        resolution={256}
+        color="#000000"
+      />
     </Canvas>
   );
 };
+
+useGLTF.preload("/models/avatar.glb");
 
 export default HeroScene;

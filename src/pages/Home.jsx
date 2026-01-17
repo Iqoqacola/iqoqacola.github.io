@@ -33,7 +33,7 @@ export const Home = () => {
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
-            className="w-full md:w-1/2 mt-10 md:mt-0 md:pr-4 md:pl-28"
+            className="w-full md:w-1/2 mt-10 md:mt-0 md:pr-4 md:pl-0 lg:pl-24"
           >
             <motion.h2
               variants={fadeUp}
