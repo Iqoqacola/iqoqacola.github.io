@@ -4,9 +4,9 @@ import {
   useGLTF,
   Environment,
   ContactShadows,
+  Float,
 } from "@react-three/drei";
 import { Suspense } from "react";
-import { rotate } from "three/tsl";
 
 function Model() {
   const { scene } = useGLTF("/models/iron_man.glb");
@@ -26,15 +26,14 @@ const AboutScene = () => {
     <Canvas
       className="w-full h-full"
       camera={{ position: [0, 750, 0], fov: 50 }}
+      dpr={[1, 2]}
     >
-      {/* Pencahayaan */}
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={1.5} color="#66FCF1" />
       <pointLight position={[-10, -10, -10]} intensity={1.5} color="#D4AF37" />
 
       <Environment preset="city" />
 
-      {/* Kontrol Interaksi */}
       <OrbitControls
         enableZoom={false}
         enablePan={false}
@@ -43,7 +42,14 @@ const AboutScene = () => {
       />
 
       <Suspense fallback={null}>
-        <Model />
+        <Float
+          speed={2}
+          rotationIntensity={1}
+          floatIntensity={1}
+          floatingRange={[-10, 10]}
+        >
+          <Model />
+        </Float>
       </Suspense>
 
       <ContactShadows
@@ -58,6 +64,6 @@ const AboutScene = () => {
   );
 };
 
-useGLTF.preload("/models/avatar.glb");
+useGLTF.preload("/models/iron_man.glb");
 
 export default AboutScene;
