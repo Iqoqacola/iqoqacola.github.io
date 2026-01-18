@@ -10,7 +10,7 @@ export const projectData = [
             frontend: "https://github.com/Iqoqacola/asapmu-parumu",
             backend: "https://github.com/Iqoqacola/asapmu-parumu-api",
         },
-        liveLink: "https://asapmu-parumu.vercel.app",
+        liveLink: null,
         laptopImg: "/projects/asapmu-laptop.png",
         mobileImg: "/projects/asapmu-mobile.png",
     },
