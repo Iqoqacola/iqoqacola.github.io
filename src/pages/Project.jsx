@@ -247,7 +247,8 @@ const Projects = () => {
                                     initial={{ opacity: 0, y: 10, scale: 0.95 }}
                                     animate={{ opacity: 1, y: 0, scale: 1 }}
                                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                                    transition={{ duration: 0.2 }} // Dropdown juga dipercepat
+                                    transition={{ duration: 0.2 }}
+                                    z
                                     className="absolute bottom-full left-0 mb-3 w-40 bg-gunmetal border border-white/10 rounded-xl shadow-xl overflow-hidden z-50 flex flex-col"
                                   >
                                     <a
