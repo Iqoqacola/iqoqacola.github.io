@@ -211,7 +211,7 @@ const Projects = () => {
                       className="flex items-center gap-4 pt-4 border-t border-white/5 relative"
                       onPointerDownCapture={(e) => e.stopPropagation()}
                     >
-                      {project.githubLink && (
+                      {project.githubLink ? (
                         <>
                           {typeof project.githubLink === "string" ? (
                             <a
@@ -272,6 +272,12 @@ const Projects = () => {
                               </AnimatePresence>
                             </div>
                           )}
+                        </>
+                      ) : (
+                        <>
+                          {" "}
+                          <FaGithub className="text-lg" />
+                          <span>Private</span>
                         </>
                       )}
 

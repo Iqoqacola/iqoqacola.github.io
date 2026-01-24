@@ -2,14 +2,14 @@
 export const projectData = [
     {
         id: 1,
-        title: "Sale Pro",
+        title: "Prioritix",
         description:
-            "A comprehensive all-in-one POS solution designed to streamline sales, inventory management, and business analytics for modern businesses, supporting multi-user roles such as owner, staff, admin, and customer.",
-        tech: ["Laravel", "MySql", "Bootstrap"],
+            "Designed for aesthetics and efficiency, this to-do app bridges planning and execution. Features a clean interface, Dark Mode, and focus tools to boost productivity.",
+        tech: ["React", "Tailwind", "Express.js ", "MySQL", "Docker"],
         githubLink: null,
         liveLink: null,
-        laptopImg: "/projects/salepro-laptop.png",
-        mobileImg: "/projects/salepro-mobile.png",
+        laptopImg: "/projects/prioritix-laptop.png",
+        mobileImg: "/projects/prioritix-mobile.png",
     },
     {
         id: 2,
@@ -24,18 +24,18 @@ export const projectData = [
         liveLink: null,
         laptopImg: "/projects/asapmu-laptop.png",
         mobileImg: "/projects/asapmu-mobile.png",
-    },
-    {
+    }, {
         id: 3,
-        title: "Prioritix",
+        title: "Sale Pro",
         description:
-            "Designed for aesthetics and efficiency, this to-do app bridges planning and execution. Features a clean interface, Dark Mode, and focus tools to boost productivity.",
-        tech: ["React", "Tailwind", "Express.js ", "PostgreSQL"],
+            "A comprehensive all-in-one POS solution designed to streamline sales, inventory management, and business analytics for modern businesses, supporting multi-user roles such as owner, staff, admin, and customer.",
+        tech: ["Laravel", "MySql", "Bootstrap"],
         githubLink: null,
         liveLink: null,
-        laptopImg: null,
-        mobileImg: null,
-    },
+        laptopImg: "/projects/salepro-laptop.png",
+        mobileImg: "/projects/salepro-mobile.png",
+    }
+
 ];
 
 
