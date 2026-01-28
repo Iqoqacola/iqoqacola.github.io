@@ -6,7 +6,7 @@ export const projectData = [
         description:
             "Designed for aesthetics and efficiency, this to-do app bridges planning and execution. Features a clean interface, Dark Mode, and focus tools to boost productivity.",
         tech: ["React", "Tailwind", "Express.js ", "MySQL", "Docker"],
-        githubLink: null,
+        githubLink: "https://github.com/Iqoqacola/prioritix.git",
         liveLink: null,
         laptopImg: "/projects/prioritix-laptop.png",
         mobileImg: "/projects/prioritix-mobile.png",
