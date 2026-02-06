@@ -2,17 +2,28 @@
 export const projectData = [
     {
         id: 1,
-        title: "Prioritix",
+        title: "Nafaya Scincare",
         description:
-            "Designed for aesthetics and efficiency, this to-do app bridges planning and execution. Features a clean interface, Dark Mode, and focus tools to boost productivity.",
-        tech: ["React", "Tailwind", "Express.js ", "MySQL", "Docker"],
-        githubLink: "https://github.com/Iqoqacola/prioritix.git",
+            "Nafaya Skincare E-commerce Platform is an online marketplace for premium skincare products with product and stock management, sales analytics, rewards, reseller program, and an easy admin interface.",
+        tech: ["Laravel", "MySql", "Bootstrap"],
+        githubLink: null,
         liveLink: null,
-        laptopImg: "/projects/prioritix-laptop.png",
-        mobileImg: "/projects/prioritix-mobile.png",
+        laptopImg: "/projects/nafaya-laptop.png",
+        mobileImg: "/projects/nafaya-mobile.png",
     },
     {
         id: 2,
+        title: "Sale Pro",
+        description:
+            "A comprehensive all-in-one POS solution designed to streamline sales, inventory management, and business analytics for modern businesses, supporting multi-user roles such as owner, staff, admin, and customer.",
+        tech: ["Laravel", "MySql", "Bootstrap"],
+        githubLink: null,
+        liveLink: null,
+        laptopImg: "/projects/salepro-laptop.png",
+        mobileImg: "/projects/salepro-mobile.png",
+    },
+    {
+        id: 3,
         title: "Asapmu Parumu",
         description:
             "A mobile-focused application designed to help users quit smoking. Features include progress tracking, health improvement statistics, and community support forums.",
@@ -24,17 +35,20 @@ export const projectData = [
         liveLink: null,
         laptopImg: "/projects/asapmu-laptop.png",
         mobileImg: "/projects/asapmu-mobile.png",
-    }, {
-        id: 3,
-        title: "Sale Pro",
+    },
+    {
+        id: 4,
+        title: "Prioritix",
         description:
-            "A comprehensive all-in-one POS solution designed to streamline sales, inventory management, and business analytics for modern businesses, supporting multi-user roles such as owner, staff, admin, and customer.",
-        tech: ["Laravel", "MySql", "Bootstrap"],
-        githubLink: null,
+            "Designed for aesthetics and efficiency, this to-do app bridges planning and execution. Features a clean interface, Dark Mode, and focus tools to boost productivity.",
+        tech: ["React", "Tailwind", "Express.js ", "MySQL", "Docker"],
+        githubLink: "https://github.com/Iqoqacola/prioritix.git",
         liveLink: null,
-        laptopImg: "/projects/salepro-laptop.png",
-        mobileImg: "/projects/salepro-mobile.png",
+        laptopImg: "/projects/prioritix-laptop.png",
+        mobileImg: "/projects/prioritix-mobile.png",
     }
+
+
 
 ];
 

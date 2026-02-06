@@ -22,8 +22,7 @@ const Projects = () => {
 
   // DATA PROJECT
   // (Desktop 16:9, Mobile 9:16)
-
-  const projects = projectData;
+  const projects = [...projectData].sort((a, b) => b.id - a.id);
 
   useEffect(() => {
     const handleResize = () => {
