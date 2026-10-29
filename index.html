@@ -8,6 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <title>Iqoqacola</title>
+  <script>
+    // Apply the saved theme before first paint so the page doesn't flash dark
+    try { if (localStorage.getItem("theme") === "light") document.documentElement.classList.add("light"); } catch (e) { }
+  </script>
 </head>
 
 <body>

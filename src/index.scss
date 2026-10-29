@@ -3,12 +3,71 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --c-rich-black: 11 12 16; // #0B0C10
+    --c-gunmetal: 31 40 51; // #1F2833
+    --c-platinum: 197 198 199; // #C5C6C7
+    --c-luxury-gold: 212 175 55; // #D4AF37
+  }
+
+  html.light {
+    --c-rich-black: 245 246 248; // #F5F6F8
+    --c-gunmetal: 214 219 226; // #D6DBE2
+    --c-platinum: 31 40 51; // #1F2833
+    --c-luxury-gold: 135 106 16; // #876A10, darker so it stays readable on light
+  }
+
   html {
     font-family: "Inter", sans-serif;
     scroll-behavior: smooth;
-    background-color: #0b0c10;
-    color: #c5c6c7;
+    background-color: rgb(var(--c-rich-black));
+    color: rgb(var(--c-platinum));
   }
+}
+
+// Light mode: flip the plain Tailwind grays/whites used across the pages.
+// Device mockups and the loading screen keep their dark look.
+// :where() keeps specificity equal to the utilities, so hover:text-luxuryGold etc. still win.
+:where(html.light) {
+  .text-white,
+  .hover\:text-white:hover {
+    color: #111418;
+  }
+  .text-gray-200 {
+    color: #1f2937;
+  }
+  .text-gray-300 {
+    color: #374151;
+  }
+  .text-gray-400 {
+    color: #4b5563;
+  }
+  .border-white\/5 {
+    border-color: rgb(17 20 24 / 0.08);
+  }
+  .border-white\/10 {
+    border-color: rgb(17 20 24 / 0.12);
+  }
+  .bg-white\/5,
+  .hover\:bg-white\/5:hover {
+    background-color: rgb(17 20 24 / 0.05);
+  }
+  .from-gray-800 {
+    --tw-gradient-from: #d1d5db var(--tw-gradient-from-position);
+  }
+  .to-yellow-100 {
+    --tw-gradient-to: #c9a227 var(--tw-gradient-to-position);
+  }
+  .bg-black .text-white {
+    color: #fff;
+  }
+}
+
+// Gold buttons (Resume, Email Me) turn white on hover in dark mode;
+// in light mode their text is light too, so hover to the dark tone instead.
+// Plain html.light (not :where) so it outranks the hover utility emitted later.
+html.light .hover\:bg-white:hover {
+  background-color: rgb(var(--c-platinum));
 }
 
 .hamburger-line {

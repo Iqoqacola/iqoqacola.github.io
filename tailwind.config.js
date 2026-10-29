@@ -1,9 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: {
+    // Resolve paths from this file, not from wherever the dev server was started
+    relative: true,
+    files: [
+      "./index.html",
+      "./src/**/*.{js,ts,jsx,tsx}",
+    ],
+  },
   theme: {
     container: {
       center: true,
@@ -14,11 +18,12 @@ export default {
         serif: ['"Playfair Display"', 'serif'],
         sans: ['"Inter"', 'sans-serif'],
       },
+      // Values live in src/index.scss (:root = dark, html.light = light)
       colors: {
-        richBlack: '#0B0C10',
-        gunmetal: '#1F2833',
-        platinum: '#C5C6C7',
-        luxuryGold: '#D4AF37',
+        richBlack: 'rgb(var(--c-rich-black) / <alpha-value>)',
+        gunmetal: 'rgb(var(--c-gunmetal) / <alpha-value>)',
+        platinum: 'rgb(var(--c-platinum) / <alpha-value>)',
+        luxuryGold: 'rgb(var(--c-luxury-gold) / <alpha-value>)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

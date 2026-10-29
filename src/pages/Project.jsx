@@ -67,7 +67,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="min-h-screen bg-richBlack pt-28 pb-20 px-6">
+    <section className="min-h-screen bg-richBlack pt-28 pb-20 px-0 sm:px-6">
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
         <motion.div
@@ -114,8 +114,9 @@ const Projects = () => {
           </button>
 
           {/* Grid Projects Area */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 min-h-[500px]">
-            <AnimatePresence mode="wait">
+          <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 min-h-[500px]">
+            {/* popLayout: the card leaving is taken out of the grid right away, so the others don't jump */}
+            <AnimatePresence mode="popLayout" initial={false}>
               {visibleProjects.map((project) => (
                 <motion.div
                   key={project.id}
@@ -286,9 +287,9 @@ const Projects = () => {
                           href={project.liveLink}
                           target="_blank"
                           rel="noreferrer"
-                          className="flex items-center gap-2 text-sm text-gray-300 hover:text-luxuryGold transition-all ml-auto"
+                          className="flex items-center gap-2 text-sm text-gray-300 hover:text-luxuryGold transition-all ml-auto whitespace-nowrap"
                         >
-                          <span>Live Demo</span>
+                          <span>Visit Website</span>
                           <FaExternalLinkAlt className="text-xs" />
                         </a>
                       )}

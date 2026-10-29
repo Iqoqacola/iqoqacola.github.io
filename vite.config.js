@@ -1,12 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import envCompatible from 'vite-plugin-env-compatible'
 
 export default defineConfig({
-  envPrefix: 'REACT_APP_',
-  plugins: [
-    react(),
-    envCompatible()
-  ],
-  base: '/'
+  plugins: [react()],
+  base: '/',
+  build: {
+    // three.js lives in the lazily loaded HeroScene chunk (~235 kB gzip), which is expected
+    chunkSizeWarningLimit: 1000,
+  },
 })

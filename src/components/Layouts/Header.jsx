@@ -1,5 +1,21 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaSun, FaMoon } from "react-icons/fa";
+import { useTheme } from "../../useTheme";
+
+const ThemeToggle = () => {
+  const { light, toggle } = useTheme();
+  return (
+    <button
+      onClick={toggle}
+      aria-label={light ? "Switch to dark mode" : "Switch to light mode"}
+      title={light ? "Dark mode" : "Light mode"}
+      className="p-2 text-lg text-gray-300 hover:text-luxuryGold transition-colors duration-300"
+    >
+      {light ? <FaMoon /> : <FaSun />}
+    </button>
+  );
+};
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -66,9 +82,14 @@ const Header = () => {
                 </button>
               </li>
             ))}
+            <li className="-ml-2">
+              <ThemeToggle />
+            </li>
           </ul>
 
-          {/* Mobile Hamburger Button */}
+          {/* Mobile: theme toggle + hamburger */}
+          <div className="md:hidden flex items-center z-50 relative">
+          <ThemeToggle />
           <button
             className="md:hidden text-platinum p-2 z-50 relative focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
@@ -93,6 +114,7 @@ const Header = () => {
               />
             </div>
           </button>
+          </div>
         </nav>
       </motion.header>
 

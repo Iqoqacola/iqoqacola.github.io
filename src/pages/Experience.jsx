@@ -14,7 +14,7 @@ const Experience = () => {
   };
 
   return (
-    <section className="min-h-screen bg-richBlack pt-28 pb-20 px-6">
+    <section className="min-h-screen bg-richBlack pt-28 pb-20 px-0 sm:px-6">
       <div className="container mx-auto max-w-5xl">
         {/* Header Page */}
         <motion.div
@@ -32,7 +32,7 @@ const Experience = () => {
           </h1>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* --- LEFT COLUMN: WORK EXPERIENCE --- */}
           <div>
             <motion.div
@@ -63,13 +63,15 @@ const Experience = () => {
                   <span className="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-richBlack bg-gray-600 group-hover:bg-luxuryGold transition-colors duration-300"></span>
 
                   <div className="bg-gunmetal/30 p-6 rounded-2xl border border-white/5 hover:border-luxuryGold/30 transition-all duration-300">
-                    <div className="flex justify-between md:flex-row flex-col items-start mb-2 gap-2 md:gap-0">
+                    <div className="flex justify-between sm:flex-row flex-col items-start mb-2 gap-2 sm:gap-3">
                       <h4 className="text-xl font-bold text-white group-hover:text-luxuryGold transition-colors">
                         {exp.role}
                       </h4>
-                      <span className="text-xs font-mono text-luxuryGold border border-luxuryGold/20 px-2 py-1 rounded">
-                        {exp.type}
-                      </span>
+                      {exp.type && (
+                        <span className="text-xs font-mono text-luxuryGold border border-luxuryGold/20 px-2 py-1 rounded shrink-0 whitespace-nowrap">
+                          {exp.type}
+                        </span>
+                      )}
                     </div>
 
                     <h5 className="text-gray-400 text-sm mb-2">
@@ -131,9 +133,16 @@ const Experience = () => {
                   <span className="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-richBlack bg-gray-600 group-hover:bg-luxuryGold transition-colors duration-300"></span>
 
                   <div className="bg-gunmetal/30 p-6 rounded-2xl border border-white/5 hover:border-luxuryGold/30 transition-all duration-300">
-                    <h4 className="text-xl font-bold text-white group-hover:text-luxuryGold transition-colors mb-1">
-                      {edu.school}
-                    </h4>
+                    <div className="flex justify-between sm:flex-row flex-col items-start mb-1 gap-2 sm:gap-3">
+                      <h4 className="text-xl font-bold text-white group-hover:text-luxuryGold transition-colors">
+                        {edu.school}
+                      </h4>
+                      {edu.gpa && (
+                        <span className="text-xs font-mono text-luxuryGold border border-luxuryGold/20 px-2 py-1 rounded shrink-0 whitespace-nowrap">
+                          GPA {edu.gpa}
+                        </span>
+                      )}
+                    </div>
 
                     <h5 className="text-gray-300 text-sm font-medium mb-2">
                       {edu.degree}

@@ -27,13 +27,13 @@ export const Home = () => {
 
   return (
     <section className="relative min-h-screen w-full bg-richBlack overflow-hidden flex items-center justify-center">
-      <div className="container mx-auto px-6 relative z-10 pt-20 md:pt-0">
-        <div className="flex flex-col-reverse md:flex-row items-center justify-between">
+      <div className="container mx-auto px-6 relative z-10 pt-24 pb-12 lg:py-0">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
-            className="w-full md:w-1/2 mt-10 md:mt-0 md:pr-4 md:pl-0 lg:pl-24"
+            className="w-full lg:w-1/2 mt-6 md:mt-10 lg:mt-0 md:px-10 lg:pr-4 lg:pl-0 xl:pl-24"
           >
             <motion.h2
               variants={fadeUp}
@@ -125,7 +125,7 @@ export const Home = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="w-full md:w-1/2 h-[350px] md:h-[500px] relative flex items-center justify-center"
+            className="w-full lg:w-1/2 h-[300px] sm:h-[380px] md:h-[440px] lg:h-[500px] relative flex items-center justify-center"
           >
             <div className="w-full h-full">
               <HeroScene />
